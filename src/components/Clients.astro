@@ -1,0 +1,44 @@
+---
+const clients = [
+  'ARMFOOD',
+  'KARKOM AUTO SERVICE',
+  'IZI PROGRESS',
+  'NEW EXPO',
+  'GREGTHAD',
+];
+---
+
+<section id="clients" class="py-24 lg:py-32 bg-burgundy-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="text-gold-400 font-semibold text-sm tracking-wider uppercase">Պատվիրատուներ</span>
+      <h2 class="font-heading text-4xl lg:text-5xl text-white mt-4">
+        Վստահելի հաճախորդներ
+      </h2>
+      <div class="w-16 h-0.5 bg-gold-500 mx-auto mt-6"></div>
+      <p class="text-white/60 mt-8 max-w-2xl mx-auto">
+        500+ կազմակերպություններ վստահում են մեզ իրենց հաշվապահական գործընկերը
+      </p>
+    </div>
+
+    <div class="reveal reveal-stagger grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      {clients.map((client) => (
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex items-center justify-center text-center hover:bg-white/10 transition-colors duration-300">
+          <span class="text-white/80 font-semibold text-sm">{client}</span>
+        </div>
+      ))}
+    </div>
+
+    <div class="reveal mt-16 max-w-3xl mx-auto text-center">
+      <svg class="w-12 h-12 text-gold-500/30 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
+      </svg>
+      <p class="text-xl lg:text-2xl text-white/80 font-light italic leading-relaxed">
+        «Մեր մասնագետները ապահովում են ծառայությունների բարձր որակ՝ անհատական մոտեցումով յուրաքանչյուր հաճախորդի նկատմամբ»
+      </p>
+      <div class="mt-6">
+        <p class="text-gold-400 font-semibold">BAC Accounting</p>
+      </div>
+    </div>
+  </div>
+</section>

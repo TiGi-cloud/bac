@@ -1,0 +1,94 @@
+---
+const categories = [
+  {
+    title: 'Դրամական միջոցներ',
+    image: '/images/dramakan-480x300.jpg',
+    laws: [
+      { name: 'ՀՀ օրենքը դրամական գործառնույթների մասին', url: 'https://www.arlis.am' },
+      { name: 'ԿԱՎ որոշումը դրամական գործառնույթների կարգի մասին', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը հսկողական-դրամարկղային մեքենաների մասին', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը արժույթի կարգավորման և արժույթի վերահսկողության մասին', url: 'https://www.arlis.am' },
+    ],
+  },
+  {
+    title: 'Աշխատանքային օրենսդրություն',
+    image: '/images/ashxatanqayin-480x300.jpg',
+    laws: [
+      { name: 'ՀՀ Աշխատանքային օրենսգիրք', url: 'https://www.arlis.am' },
+      { name: 'ԿԱՎ որոշումը աշխատավարձի վճարման կարգի մասին', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը նվազագույն ամսական աշխատավարձի մասին', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը տոների և հիշատակի օրերի մասին', url: 'https://www.arlis.am' },
+      { name: 'ԿԱՎ որոշումը աշխատանքի ժամերի հաշվարկման կարգի մասին', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը կուտակային կենսաների մասին', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը եկամտային հարկի և անձնավորված սոցիալական վճարի մասին', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը ժամանակավոր անաշխատունակության և ծննդաբերության նպաստների մասին', url: 'https://www.arlis.am' },
+    ],
+  },
+  {
+    title: 'Հարկեր',
+    image: '/images/harker-480x300.jpg',
+    laws: [
+      { name: 'ՀՀ օրենքը հարկերի մասին', url: 'https://www.arlis.am' },
+      { name: 'Ընտանեկան ձեռնարկատիրության հարկումը (հոդվածներ 13.7-13.13)', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը շրժանառության հարկի մասին', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը արտոնագրային վճարների մասին', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը ավելացված արժեքի հարկի մասին (ԱԱՀ)', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը շահութահարկի մասին', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը եկամտային հարկի մասին', url: 'https://www.arlis.am' },
+    ],
+  },
+  {
+    title: 'Այլ օրենսդրական ակտեր',
+    image: '/images/ayl-orensdakan-480x300.jpg',
+    laws: [
+      { name: 'ԿԱՎ որոշումը ծախսերի փաստաթղթերի պահանիների մասին', url: 'https://www.arlis.am' },
+      { name: 'ԱԱՀ հաշվարկման կարգի մասին', url: 'https://www.arlis.am' },
+      { name: 'ՀՀ օրենքը աուդիտի կազմակերպման և իրականացման մասին', url: 'https://www.arlis.am' },
+    ],
+  },
+];
+---
+
+<section id="legal" class="py-24 lg:py-32 bg-stone/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="text-gold-500 font-semibold text-sm tracking-wider uppercase">Օրենսդրական ակտեր</span>
+      <h2 class="font-heading text-4xl lg:text-5xl text-burgundy-900 mt-4 gold-line-center">
+        Օգտակար Օրենսդրություն
+      </h2>
+      <p class="text-charcoal/60 mt-8 max-w-2xl mx-auto">
+        Կարևոր օրենսդրական ակտեր և հղումներ հաշվապահների և գործատուների համար
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      {categories.map((cat, i) => (
+        <div class="reveal bg-white rounded-2xl overflow-hidden shadow-sm border border-stone/50" style={`transition-delay: ${i * 0.1}s`}>
+          <div class="img-zoom h-44">
+            <img src={cat.image} alt={cat.title} class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6 lg:p-8">
+            <h3 class="font-heading text-xl text-burgundy-900 mb-4">{cat.title}</h3>
+            <ul class="space-y-3">
+              {cat.laws.map((law) => (
+                <li>
+                  <a
+                    href={law.url}
+                    target="_blank"
+                    rel="noopener"
+                    class="flex items-start gap-2 text-sm text-charcoal/70 hover:text-burgundy-900 transition-colors group"
+                  >
+                    <svg class="w-4 h-4 text-gold-500 mt-0.5 flex-shrink-0 group-hover:text-burgundy-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    {law.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

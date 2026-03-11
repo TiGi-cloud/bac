@@ -1,0 +1,77 @@
+---
+const services = [
+  {
+    title: 'Հաշվապահության վարում',
+    description: 'Հաշվապահական փաստաթղթերի պատրաստում, ֆինանսական հաշվետվությունների ներկայացում, հարկային ոպտիմալացում և խորհրդատվություն:',
+    image: '/images/hashvapahutyan_varum.jpg',
+    features: [
+      'Հաշվապահական հաշվառում',
+      'Հարկային հաշվետվություններ',
+      'Կադրերի հաշվառում',
+      'Հարկային բեռի օպտիմալացում',
+      'Ֆինանսական խորհրդատվություն',
+    ],
+  },
+  {
+    title: 'Բիզնեսի գրանցում',
+    description: 'Արագ բիզնեսի գրանցում անվճար խորհրդատվությամբ: Գրանցում վիճակագրական ծառայությունում, IT համակարգերում և պետական մարմիններում:',
+    image: '/images/biznes-grancum.jpg',
+    features: [
+      'Արագ գրանցում',
+      'Անվճար խորհրդատվություն',
+      'IT համակարգերում գրանցում',
+      'Պետական մարմիններում հաշվառում',
+    ],
+  },
+  {
+    title: 'Ծրագրերի վաճառք և սպասարկում',
+    description: 'ՀԾ-Հաշվապահ 6 ծրագրի ներդնում և վաճառք: Ապահովում է հաշվապահության բոլոր բաժինների ավտոմատացում:',
+    image: '/images/programm-sale.jpg',
+    features: [
+      'Հաշվապահության ավտոմատացում',
+      'Հարկային էլ. հաշվետվություններ',
+      'MS Word, Excel համատեղելիություն',
+      'Հզոր հաշվետվային համակարգ',
+      'ԱՆՎՃԱՐ ներդնում և ուսուցում',
+    ],
+  },
+];
+---
+
+<section id="services" class="py-24 lg:py-32 bg-stone/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="text-gold-500 font-semibold text-sm tracking-wider uppercase">Ծառայություններ</span>
+      <h2 class="font-heading text-4xl lg:text-5xl text-burgundy-900 mt-4 gold-line-center">
+        Մեր Ծառայությունները
+      </h2>
+      <p class="text-charcoal/60 mt-8 max-w-2xl mx-auto">
+        Առաջարկում ենք լիարժեք հաշվապահական ծառայություններ ցանկացած տեսակի կազմակերպությունների
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {services.map((service, i) => (
+        <div class="reveal service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-stone/50 flex flex-col" style={`transition-delay: ${i * 0.15}s`}>
+          <div class="img-zoom h-52">
+            <img src={service.image} alt={service.title} class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6 lg:p-8 flex-1 flex flex-col">
+            <h3 class="font-heading text-xl text-burgundy-900 mb-3">{service.title}</h3>
+            <p class="text-charcoal/60 text-sm leading-relaxed mb-5 flex-1">{service.description}</p>
+            <ul class="space-y-2">
+              {service.features.map((f) => (
+                <li class="flex items-start gap-2 text-sm text-charcoal/70">
+                  <svg class="w-4 h-4 text-gold-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

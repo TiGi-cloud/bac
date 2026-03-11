@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Services from '../components/Services.astro';
+import Courses from '../components/Courses.astro';
+import LegalActs from '../components/LegalActs.astro';
+import Resources from '../components/Resources.astro';
+import Clients from '../components/Clients.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Navbar />
+  <Hero />
+  <About />
+  <Services />
+  <Courses />
+  <LegalActs />
+  <Resources />
+  <Clients />
+  <Contact />
+  <Footer />
+</Layout>
+
+<script>
+  // Scroll reveal animation
+  const revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+</script>

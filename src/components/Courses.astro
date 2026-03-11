@@ -1,0 +1,104 @@
+---
+const courses = [
+  {
+    title: 'Հաշվապահության ուսուցում',
+    duration: '3-5 ամիս',
+    schedule: 'շաբաթական 3 օր',
+    image: '/images/hasvapah-usucum-600x400.jpg',
+    highlight: 'ԱՆՎՃԱՐ ՄԻՆՉԵՎ 6-ՐԴ ԴԱՍԸ',
+    features: ['Առավելագույնը 5-7 ուսանող', 'Պրակտիկ նյութեր', 'Վկայական'],
+  },
+  {
+    title: 'ՀԾ-Հաշվապահ 6',
+    duration: '1 ամիս',
+    schedule: 'շաբաթական 3 օր',
+    image: '/images/hasvapah-6-600x400.jpg',
+    highlight: null,
+    features: ['Ծրագրի ներդնում', 'Փորձառու դասախոսներ', 'Վկայական'],
+  },
+  {
+    title: '1C ծրագրի ուսուցում',
+    duration: '1 ամիս',
+    schedule: 'շաբաթական 3 օր, 2 ժամ',
+    image: '/images/1c-600x400.jpg',
+    highlight: null,
+    features: ['Առավելագույնը 3-5 ուսանող', 'Demo տարբերակ', 'Վկայական'],
+  },
+  {
+    title: 'Հաշվապահների վերապատրաստում',
+    duration: 'Անհատական',
+    schedule: 'Ճկուն գրաֆիկ',
+    image: '/images/verapatrastum-600x400.jpg',
+    highlight: null,
+    features: ['Տեսական գիտելիքներ', 'Պրակտիկ հմտություններ', 'Վկայական'],
+  },
+  {
+    title: 'Կադրային գործավարություն',
+    duration: '1 ամիս',
+    schedule: 'շաբաթական 3 օր, 1.5-2 ժամ',
+    image: '/images/kadrain-gorcavar-600x400.jpg',
+    highlight: null,
+    features: ['Աշխատանքային պայմանագրեր', 'Աշխատավարձի հաշվարկում', 'Իրավական ակտեր'],
+  },
+  {
+    title: 'MS Office (Excel)',
+    duration: '8 դասախոսային ժամ',
+    schedule: 'շաբաթական 3 օր',
+    image: '/images/ms-office-600x400.jpg',
+    highlight: null,
+    features: ['Առավելագույնը 4-7 ուսանող', 'Էլեկտրոնային նյութեր', 'Excel 2010 ծրագիր'],
+  },
+];
+---
+
+<section id="courses" class="py-24 lg:py-32 bg-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="text-gold-500 font-semibold text-sm tracking-wider uppercase">Դասընթացներ</span>
+      <h2 class="font-heading text-4xl lg:text-5xl text-burgundy-900 mt-4 gold-line-center">
+        Մեր Դասընթացները
+      </h2>
+      <p class="text-charcoal/60 mt-8 max-w-2xl mx-auto">
+        Մասնագիտացված դասընթացներ փորձառու գլխավոր հաշվապահների կողմից
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {courses.map((course, i) => (
+        <div class="reveal service-card bg-white rounded-2xl overflow-hidden shadow-sm border border-stone/50 relative flex flex-col" style={`transition-delay: ${i * 0.1}s`}>
+          {course.highlight && (
+            <div class="absolute top-4 right-4 z-10 bg-gold-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">{course.highlight}</div>
+          )}
+          <div class="img-zoom h-48">
+            <img src={course.image} alt={course.title} class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="font-heading text-lg text-burgundy-900 mb-3">{course.title}</h3>
+            <div class="flex items-center gap-4 mb-4 flex-wrap">
+              <span class="inline-flex items-center gap-1.5 text-xs text-charcoal/60 bg-stone/50 px-3 py-1.5 rounded-full">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                {course.duration}
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs text-charcoal/60 bg-stone/50 px-3 py-1.5 rounded-full">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                {course.schedule}
+              </span>
+            </div>
+            <ul class="space-y-2 flex-1">
+              {course.features.map((f) => (
+                <li class="flex items-center gap-2 text-sm text-charcoal/70">
+                  <div class="w-1.5 h-1.5 bg-gold-500 rounded-full flex-shrink-0"></div>
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <a href="#contact" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-burgundy-900 hover:text-gold-500 transition-colors">
+              Մանրամասներ
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
