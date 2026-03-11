@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-burgundy-50: #fdf2f4;
-  --color-burgundy-100: #fce7eb;
-  --color-burgundy-200: #f8d0d9;
-  --color-burgundy-300: #f2a9b8;
-  --color-burgundy-400: #e97993;
-  --color-burgundy-500: #dc4e6f;
-  --color-burgundy-600: #c82d56;
-  --color-burgundy-700: #a82145;
-  --color-burgundy-800: #8c1e3d;
-  --color-burgundy-900: #722f37;
-  --color-burgundy-950: #44101b;
+  --color-blue-50: #e6f4fb;
+  --color-blue-100: #c0e3f5;
+  --color-blue-200: #8ccbec;
+  --color-blue-300: #52b0e1;
+  --color-blue-400: #1a9ad4;
+  --color-blue-500: #0188c6;
+  --color-blue-600: #0177ad;
+  --color-blue-700: #016291;
+  --color-blue-800: #014e74;
+  --color-blue-900: #013d5c;
+  --color-blue-950: #00263a;
 
   --color-gold-50: #fdfaed;
   --color-gold-100: #f9f0cb;
@@ -48,7 +48,7 @@
   }
 
   ::selection {
-    background-color: var(--color-burgundy-900);
+    background-color: var(--color-blue-900);
     color: white;
   }
 }
@@ -81,7 +81,7 @@
 
 /* Hero gradient */
 .hero-gradient {
-  background: linear-gradient(135deg, rgba(114, 47, 55, 0.93) 0%, rgba(68, 16, 27, 0.9) 50%, rgba(44, 44, 44, 0.87) 100%);
+  background: linear-gradient(135deg, rgba(1, 136, 198, 0.93) 0%, rgba(1, 98, 145, 0.9) 50%, rgba(44, 44, 44, 0.87) 100%);
 }
 
 /* Card hover */
@@ -90,7 +90,7 @@
 }
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 48px rgba(114, 47, 55, 0.12);
+  box-shadow: 0 16px 48px rgba(1, 136, 198, 0.12);
 }
 
 /* Gold accent lines */
@@ -123,10 +123,10 @@
   color: var(--color-charcoal) !important;
 }
 .nav-scrolled .nav-link:hover {
-  color: var(--color-burgundy-900) !important;
+  color: var(--color-blue-900) !important;
 }
 .nav-scrolled .nav-logo-text {
-  color: var(--color-burgundy-900) !important;
+  color: var(--color-blue-900) !important;
 }
 .nav-scrolled #mobile-menu-btn {
   color: var(--color-charcoal) !important;
@@ -177,5 +177,5 @@ textarea:focus-visible {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-burgundy-300);
+  background: var(--color-blue-300);
 }

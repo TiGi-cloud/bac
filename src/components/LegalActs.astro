@@ -53,7 +53,7 @@ const categories = [
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 reveal">
       <span class="text-gold-500 font-semibold text-sm tracking-wider uppercase">Օրենսդրական ակտեր</span>
-      <h2 class="font-heading text-4xl lg:text-5xl text-burgundy-900 mt-4 gold-line-center">
+      <h2 class="font-heading text-4xl lg:text-5xl text-blue-900 mt-4 gold-line-center">
         Օգտակար Օրենսդրություն
       </h2>
       <p class="text-charcoal/60 mt-8 max-w-2xl mx-auto">
@@ -68,7 +68,7 @@ const categories = [
             <img src={cat.image} alt={cat.title} class="w-full h-full object-cover" />
           </div>
           <div class="p-6 lg:p-8">
-            <h3 class="font-heading text-xl text-burgundy-900 mb-4">{cat.title}</h3>
+            <h3 class="font-heading text-xl text-blue-900 mb-4">{cat.title}</h3>
             <ul class="space-y-3">
               {cat.laws.map((law) => (
                 <li>
@@ -76,9 +76,9 @@ const categories = [
                     href={law.url}
                     target="_blank"
                     rel="noopener"
-                    class="flex items-start gap-2 text-sm text-charcoal/70 hover:text-burgundy-900 transition-colors group"
+                    class="flex items-start gap-2 text-sm text-charcoal/70 hover:text-blue-900 transition-colors group"
                   >
-                    <svg class="w-4 h-4 text-gold-500 mt-0.5 flex-shrink-0 group-hover:text-burgundy-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-gold-500 mt-0.5 flex-shrink-0 group-hover:text-blue-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                     {law.name}
